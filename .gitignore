@@ -1,5 +1,7 @@
 # Typical mac OS stuffs
 .DS_Store
 
-#
+# Dev
 node_modules
+.tmp
+dist
