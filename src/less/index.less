@@ -1,3 +1,22 @@
 body {
+    margin: 0px;
+}
 
+.content-block {
+    height: 700px;
+    background-color: #333;
+
+    &:nth-child(even) {
+        background-color: #ccc;
+    }
+}
+
+@media (max-width: 1000px) {
+    .content-block {
+        background-color: red;
+
+        &:nth-child(even) {
+            background-color: blue;
+        }
+    }
 }
