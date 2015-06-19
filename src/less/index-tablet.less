@@ -1,0 +1,35 @@
+@import url('./includes/theme.less');
+
+@media (min-width: 641px) and (max-width: 1000px) {
+    .content-block {
+        p {
+            width: 300px;
+            text-align: left;
+            float: right
+        }
+
+        img {
+            display: inline-block;
+            float: left;
+        }
+
+        &:nth-child(even) {
+            p {
+                width: 300px;
+                text-align: left;
+                float: left
+            }
+
+            img {
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import url('./includes/theme.less');
+
+body {
+    margin: 0px;
+}
+
+.content-block {
+    background-color: #aaa;
+
+    &:nth-child(even) {
+        background-color: #eee;
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        border-top: 1px solid transparent;
+        margin-bottom: 30px;
+    }
+
+    img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 640px) {
+    .content-block {
+        p {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
