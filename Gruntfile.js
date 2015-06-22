@@ -22,6 +22,14 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        jshint: {
+            dev: {
+                options: {
+                    jshintrc: true
+                },
+                src: [ 'src/js/**/*.js' ]
+            }
+        },
         concat: {
             build: {
                 files: [{
@@ -34,6 +42,13 @@ module.exports = function (grunt) {
             less: {
                 files: 'src/less/**/*.less',
                 tasks: [ 'less:dev', 'concat:build' ],
+                options: {
+                  livereload: true
+                }
+            },
+            js: {
+                files: 'src/js/**/*.js',
+                tasks: [ 'jshint:dev', 'copy:dev' ],
                 options: {
                   livereload: true
                 }
