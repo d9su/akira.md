@@ -4,8 +4,44 @@ body {
     margin: 0px;
 }
 
+header {
+    padding: @mediumGutter;
+
+    .logo {
+        height: 24px;
+    }
+
+    .menu {
+        width: 40px;
+        height: 24px;
+        background: url('img/i/menu@2x.png') no-repeat;
+        border: none;
+        padding: 0px;
+        float: right;
+        text-indent: 1000px;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    color: @headerColor;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-rendering: optimizelegibility;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    color: @headerColor;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-rendering: optimizelegibility;
+    line-height: 30px;
+}
+
 .header-block {
-    margin: 60px 0;
+    padding: @largeGutter;
 
     h1 {
         text-align: center;
@@ -20,30 +56,39 @@ body {
         width: 300px;
         margin: 0 auto;
     }
+
+    button {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .content-block {
-    background-color: #aaa;
+    border-top: 1px solid #f7f8fa;
+    padding: 0 @largeGutter;
 
-    &:nth-child(even) {
-        background-color: #eee;
+    h2 {
+        text-align: center;
     }
 
-    &:before {
-        content: '';
+    button {
         display: block;
-        border-top: 1px solid transparent;
-        margin-bottom: 30px;
+        margin: 0 auto;
     }
 
     img {
+        display: block;
         width: 300px;
+        margin: 0 auto;
+    }
+
+    &:nth-child(even) {
+        background-color: #f9f9fa;
     }
 }
 
 .testimonials {
-    margin: 30px 0;
-
+    
     ._quotes {
         list-style: none;
         margin: 0;
@@ -59,27 +104,38 @@ body {
             top: 0;
             bottom: 0;
 
+            p {
+                font-size: 24px;
+                color: @quoteColor;
+                letter-spacing: 0.3px;
+                line-height: 34px;
+
+                text-align: center;
+            }
+
+            span {
+                font-size: 16px;
+                color: @mainCopyColor;
+                letter-spacing: 0.3px;
+                line-height: 20px;
+                display: block;
+                text-align: center;
+            }
+
             &.-prev {
                 left: -100%;
-                background: red;
             }
 
             &.-current {
                 left: 0;
-                background: green;
             }
 
             &.-next {
                 left: 100%;
-                background: blue;
             }
 
             transition: left 0.3s ease-in;
         }
-    }
-
-    ._paginator {
-        text-align: center;
     }
 }
 
