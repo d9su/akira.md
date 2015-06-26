@@ -1,7 +1,9 @@
 @import url('./includes/theme.less');
+@import url('./includes/buttons.less');
 
 body {
     margin: 0px;
+    font-family: 'Gotham Rounded', sans-serif;
 }
 
 header {
@@ -46,6 +48,20 @@ h3 {
     line-height: 17px;
 }
 
+p {
+    font-size: 18px;
+    color: @headerColor;
+    letter-spacing: 0.3px;
+    text-rendering: optimizelegibility;
+    line-height: 23px;
+}
+
+button.signup {
+    .general-button();
+    background-color: #6cd089;
+    border: none;
+}
+
 .header-block {
     padding: @largeGutter;
 
@@ -60,12 +76,12 @@ h3 {
     img {
         display: block;
         width: 300px;
-        margin: 0 auto;
+        margin: @largeGutter auto 0;
     }
 
     button {
         display: block;
-        margin: 0 auto;
+        margin: @largeGutter auto 0;
     }
 }
 
@@ -85,7 +101,7 @@ h3 {
     img {
         display: block;
         width: 300px;
-        margin: 0 auto;
+        margin: @largeGutter auto 0;
     }
 
     &:nth-child(even) {
@@ -114,8 +130,8 @@ h3 {
                 color: @quoteColor;
                 letter-spacing: 0.3px;
                 line-height: 34px;
-
                 text-align: center;
+                font-style: italic;
             }
 
             span {
