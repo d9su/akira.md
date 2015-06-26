@@ -60,6 +60,28 @@ button.signup {
     .general-button();
     background-color: #6cd089;
     border: none;
+    color: #fff;
+}
+
+button.explore {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #6cd089;
+    color: #6cd089;
+}
+
+button.discover {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #4eb8cc;
+    color: #4eb8cc;
+}
+
+button.learn {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #a182b6;
+    color: #a182b6;
 }
 
 .header-block {
@@ -95,7 +117,7 @@ button.signup {
 
     button {
         display: block;
-        margin: 0 auto;
+        margin: @largeGutter auto 0;
     }
 
     img {
@@ -168,15 +190,15 @@ footer {
     }
 }
 
-@media (max-width: 640px) {
-    .content-block {
-        p {
-            text-align: center;
-        }
+// @media (max-width: 640px) {
+//     .content-block {
+//         p {
+//             text-align: center;
+//         }
 
-        img {
-            display: block;
-            margin: 0 auto;
-        }
-    }
-}
+//         img {
+//             display: block;
+//             margin: 0 auto;
+//         }
+//     }
+// }
