@@ -1,0 +1,263 @@
+@import url('./includes/theme.less');
+@import url('./includes/buttons.less');
+
+body {
+    margin: 0px;
+    font-family: 'Gotham Rounded', sans-serif;
+}
+
+header {
+    padding: @mediumGutter;
+
+    .logo {
+        height: 24px;
+    }
+
+    .menu {
+        width: 40px;
+        height: 24px;
+        background: url('img/i/menu@2x.png') no-repeat;
+        border: none;
+        padding: 0px;
+        float: right;
+        text-indent: 1000px;
+    }
+}
+
+h1 {
+    font-size: 36px;
+    color: @headerColor;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    text-rendering: optimizelegibility;
+    line-height: 30px;
+}
+
+h2 {
+    font-size: 24px;
+    color: @headerColor;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-rendering: optimizelegibility;
+    line-height: 30px;
+}
+
+h3 {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    line-height: 17px;
+}
+
+p {
+    font-size: 18px;
+    color: @headerColor;
+    letter-spacing: 0.3px;
+    text-rendering: optimizelegibility;
+    line-height: 23px;
+}
+
+button.signup {
+    .general-button();
+    background-color: #6cd089;
+    border: none;
+    color: #fff;
+}
+
+button.explore {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #6cd089;
+    color: #6cd089;
+}
+
+button.discover {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #4eb8cc;
+    color: #4eb8cc;
+}
+
+button.learn {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #a182b6;
+    color: #a182b6;
+}
+
+.header-block {
+    padding: @largeGutter;
+
+    h1 {
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        width: 300px;
+        margin: @largeGutter auto 0;
+    }
+
+    button {
+        display: block;
+        margin: @largeGutter auto 0;
+    }
+}
+
+.content-block {
+    border-top: 1px solid #f7f8fa;
+    padding: 0 @largeGutter;
+
+    h2 {
+        text-align: center;
+
+        &.icon:before {
+            content: '';
+            display: block;
+            margin: @largeGutter auto;
+            height: 60px;
+            width: 60px;
+            border-radius: 12px;
+        }
+
+        &.icon.-advice:before {
+            background: #6cd089;
+            background-image: url('img/i/bolt@2x.png');
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: 15px 12px;
+        }
+
+        &.icon.-record:before {
+            background: #4eb8cc;
+            background-image: url('img/i/bullets@2x.png');
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: 15px 21px;
+        }
+
+        &.icon.-assistant:before {
+            background: #a182b6;
+            background-image: url('img/i/avatar@2x.png');
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: 15px 15px;
+        }
+    }
+
+    p {
+        text-align: center;
+    }
+
+    button {
+        display: block;
+        margin: @largeGutter auto 0;
+    }
+
+    img {
+        display: block;
+        width: 300px;
+        margin: @largeGutter auto 0;
+    }
+
+    &:nth-child(even) {
+        background-color: #f9f9fa;
+    }
+}
+
+.toggle-buttons {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+
+    button {
+        background: transparent;
+        padding: 18px @mediumGutter;
+        width: 50%;
+        display: table-cell;
+        border: 1px solid #4eb8cc;
+        color: #4eb8cc;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+
+        font-family: 'Gotham Rounded', sans-serif;
+        font-size: 14px;
+        text-rendering: optimizelegibility;
+        letter-spacing: 0.3px;
+
+        & + button {
+            border-left: none;
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        &.-active {
+            background: #4eb8cc;
+            color: #fff;
+        }
+    }
+}
+
+.testimonials {
+    ._quotes {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
+
+        ._quote {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            bottom: 0;
+
+            p {
+                font-size: 24px;
+                color: @quoteColor;
+                letter-spacing: 0.3px;
+                line-height: 34px;
+                text-align: center;
+                font-style: italic;
+            }
+
+            span {
+                font-size: 16px;
+                color: @mainCopyColor;
+                letter-spacing: 0.3px;
+                line-height: 20px;
+                display: block;
+                text-align: center;
+            }
+
+            &.-prev {
+                left: -100%;
+            }
+
+            &.-current {
+                left: 0;
+            }
+
+            &.-next {
+                left: 100%;
+            }
+
+            transition: left 0.3s ease-in;
+        }
+    }
+}
+
+footer {
+    background: #263B42;
+
+    h3 {
+        color: #fff;
+    }
+}
