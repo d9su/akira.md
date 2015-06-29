@@ -72,4 +72,34 @@
     $('.contact ._send-email').on('click', function () {
         window.location.href = 'mailto:support@akira.com';
     });
+
+    /*
+        Scroll animation
+    */
+    $(window).on('scroll', function () {
+        var scrollTop = $('body').scrollTop(),
+            viewportHeight = $(window).height(),
+            totalScrollMark = scrollTop + viewportHeight;
+
+        if (
+            $('.explore-img').hasClass('-hidden')
+            && totalScrollMark > $('.explore-img').offset().top + $('.explore-img').height()/3
+        ) {
+            $('.explore-img').removeClass('-hidden');
+        } 
+
+        if (
+            $('.discover-img').hasClass('-hidden')
+            && totalScrollMark > $('.discover-img').offset().top + $('.discover-img').height()/3
+        ) {
+            $('.discover-img').removeClass('-hidden');
+        } 
+
+        if (
+            $('.learn-img').hasClass('-hidden')
+            && totalScrollMark > $('.learn-img').offset().top + $('.learn-img').height()/3
+        ) {
+            $('.learn-img').removeClass('-hidden');
+        }
+    });
 })();
