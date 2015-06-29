@@ -11,6 +11,17 @@
         <button class="menu">Menu</button>
     </header>
 
+    <div class="menu-overlay -hidden">
+        <ul class="_nav-list">
+            <li class="_home">Home</li>
+            <li class="_about">About</li>
+            <li class="_features">Features</li>
+            <li class="_career">Career</li>
+        </ul>
+
+        <button class="_close">Close</button>
+    </div>
+
     <div class="header-block">
         <h1>
             A doctor in your pocket
@@ -82,16 +93,21 @@
         <h2>
             Get started with Akira
         </h2>
+
         <div class="_form-toggle">
-            <button class="-active">For companies</button>
-            <button>For individuals</button>
+            <button class="-active" data-type="company">For companies</button>
+            <button data-type="individual">For individuals</button>
         </div>
-        <p>
-            Akira is currently only available as a benefit through your employer. If you'd like to receive updates as we work to expand our service, please enter your email below!
-        </p>
-        <p>
-            Akira is currently in closed beta. If you'd like to apply to get Akira for your company, please fill out the form below.
-        </p>
+
+        <div class="_form-description">
+            <p class="_company -active">
+                Akira is currently in closed beta. If you'd like to apply to get Akira for your company, please fill out the form below.
+            </p>
+            <p class="_individual">
+                Akira is currently only available as a benefit through your employer. If you'd like to receive updates as we work to expand our service, please enter your email below!
+            </p>
+        </div>
+
         <div class="signup-form -company">
             <!-- Begin MailChimp Signup Form -->
             <div id="mc_embed_signup">
@@ -132,7 +148,7 @@
         <img class="logo" src="/img/whiteLogo@2x.png" alt="Akira" />
         <div class="social-links">
             <a class="-facebook" href="javascript:void(0)">Facebook</a>
-            <a class="-twitter" href="javascript:void(0)">Twitter</a>
+            <a class="-twitter" href="https://twitter.com/akiradoc">Twitter</a>
         </div>
 
         <div class="site-map">
@@ -155,7 +171,7 @@
 
         <div class="contact">
             <h3>Email Us</h3>
-            <a href="mailto:support@akira.com">support@akira.com</a>
+            <a class="_send-email" href="javascript:void(0)">support@akira.com</a>
         </div>
     </footer>
 
