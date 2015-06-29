@@ -20,7 +20,7 @@ header {
         border: none;
         padding: 0px;
         float: right;
-        text-indent: 1000px;
+        text-indent: 9999px;
     }
 }
 
@@ -46,14 +46,6 @@ h3 {
     font-size: 14px;
     letter-spacing: 0.3px;
     line-height: 17px;
-}
-
-p {
-    font-size: 18px;
-    color: @headerColor;
-    letter-spacing: 0.3px;
-    text-rendering: optimizelegibility;
-    line-height: 23px;
 }
 
 button.signup {
@@ -92,18 +84,23 @@ button.learn {
     }
 
     p {
+        font-size: 18px;
+        color: @headerColor;
+        letter-spacing: 0.3px;
+        text-rendering: optimizelegibility;
+        line-height: 23px;
         text-align: center;
+    }
+
+    button {
+        display: block;
+        margin: 30px auto 60px;
     }
 
     img {
         display: block;
         width: 300px;
-        margin: @largeGutter auto 0;
-    }
-
-    button {
-        display: block;
-        margin: @largeGutter auto 0;
+        margin: 60px auto 90px;
     }
 }
 
@@ -112,6 +109,7 @@ button.learn {
     padding: 0 @largeGutter;
 
     h2 {
+        margin: 80px 0 30px;
         text-align: center;
 
         &.icon:before {
@@ -149,18 +147,23 @@ button.learn {
     }
 
     p {
+        font-size: 15px;
+        color: @headerColor;
+        letter-spacing: 0.3px;
+        text-rendering: optimizelegibility;
+        line-height: 22px;
         text-align: center;
     }
 
     button {
         display: block;
-        margin: @largeGutter auto 0;
+        margin: 30px auto 60px;
     }
 
     img {
         display: block;
         width: 300px;
-        margin: @largeGutter auto 0;
+        margin: 60px auto 0;
     }
 
     &:nth-child(even) {
@@ -169,6 +172,8 @@ button.learn {
 }
 
 .testimonials {
+    padding: 100px 0;
+
     ._quotes {
         list-style: none;
         margin: 0;
@@ -219,38 +224,58 @@ button.learn {
     }
 }
 
-.toggle-buttons {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
+.signup-form-container {
+    padding: 0 20px;
 
-    button {
-        background: transparent;
-        padding: 18px @mediumGutter;
-        width: 50%;
-        display: table-cell;
-        border: 1px solid #4eb8cc;
-        color: #4eb8cc;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
+    h2 {
+        margin: 100px 0 40px;
+        text-align: center;
+    }
 
-        font-family: 'Gotham Rounded', sans-serif;
-        font-size: 14px;
+    ._form-toggle {
+        margin: 40px 0;
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+
+        button {
+            background: transparent;
+            padding: 18px @mediumGutter;
+            width: 50%;
+            display: table-cell;
+            border: 1px solid #4eb8cc;
+            color: #4eb8cc;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+
+            font-family: 'Gotham Rounded', sans-serif;
+            font-size: 14px;
+            text-rendering: optimizelegibility;
+            letter-spacing: 0.3px;
+
+            & + button {
+                border-left: none;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+
+            &.-active {
+                background: #4eb8cc;
+                color: #fff;
+            }
+        }
+    }
+
+    p {
+        margin: 40px 0;
+        font-size: 15px;
+        color: @mainCopyColor;
+        letter-spacing: 0.5px;
         text-rendering: optimizelegibility;
-        letter-spacing: 0.3px;
-
-        & + button {
-            border-left: none;
-            border-top-left-radius: 0px;
-            border-bottom-left-radius: 0px;
-            border-top-right-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        &.-active {
-            background: #4eb8cc;
-            color: #fff;
-        }
+        line-height: 22px;
+        text-align: center;
     }
 }
 
@@ -271,6 +296,10 @@ button.learn {
     }
 
     input[type="submit"] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;  
+
         .general-button();
         background-color: #6cd089;
         border: none;
@@ -314,9 +343,92 @@ button.learn {
 }
 
 footer {
-    background: #263B42;
+    background: #253b43;
+    padding: 60px @largeGutter 80px;
+    color: #fff;
 
     h3 {
-        color: #fff;
+        margin: 50px 0 25px;
+        font-size: 16px;
+    }
+
+    .logo {
+        height: 24px;
+        float: left;
+    }
+
+    .social-links {
+        float: right;
+        text-align: right;
+
+        a {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-left: @smallGutter;
+            text-indent: 9999px;
+            overflow: hidden;
+
+            &.-facebook {
+                background: url('img/i/facebook@2x.png') no-repeat 50% 50%;
+                background-size: 50%;
+            }
+
+            &.-twitter {
+                background: url('img/i/twitter@2x.png') no-repeat 50% 50%;
+                background-size: 100%;
+            }
+        }
+    }
+
+    .site-map {
+        clear: both;
+        float: left;
+        width: 30%;
+
+        a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            margin-top: 15px;
+            opacity: 0.6;
+        }
+    }
+
+    .location {
+        width: 69%;
+        box-sizing: border-box;
+        float: left;
+        padding-left: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .address {
+        border-top: 1px solid transparent;
+        clear: both;
+
+        h3 {
+            margin: 40px 0 10px;
+        }
+
+        p {
+            opacity: 0.6;
+            margin: 10px 0;
+        }
+    }
+
+    .contact {
+        h3 {
+            margin: 20px 0 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            opacity: 0.6;
+        }
     }
 }
