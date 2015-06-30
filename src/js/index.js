@@ -70,7 +70,7 @@
         Send email
     */
     $('.contact ._send-email').on('click', function () {
-        window.location.href = 'mailto:support@akira.com';
+        window.location.href = 'mailto:support@akira.md';
     });
 
     /*
