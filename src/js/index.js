@@ -76,30 +76,50 @@
     /*
         Scroll animation
     */
-    $(window).on('scroll', function () {
+    function debounce(func, wait) {
+        var timeout;
+
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                func.apply(context, args);
+            };
+            var callNow = !timeout;
+
+            clearTimeout(timeout);
+            timeout = setTimeout(later, wait);
+            
+            if (callNow) {
+                func.apply(context, args);
+            }
+        };
+    }
+
+    $(window).on('scroll', debounce(function () {
         var scrollTop = $('body').scrollTop(),
             viewportHeight = $(window).height(),
             totalScrollMark = scrollTop + viewportHeight;
 
         if (
             $('.explore-img').hasClass('-hidden')
-            && totalScrollMark > $('.explore-img').offset().top + $('.explore-img').height()/3
+            && totalScrollMark > $('.explore-img').offset().top - $('.explore-img').height()/5
         ) {
             $('.explore-img').removeClass('-hidden');
         } 
 
         if (
             $('.discover-img').hasClass('-hidden')
-            && totalScrollMark > $('.discover-img').offset().top + $('.discover-img').height()/3
+            && totalScrollMark > $('.discover-img').offset().top - $('.discover-img').height()/5
         ) {
             $('.discover-img').removeClass('-hidden');
         } 
 
         if (
             $('.learn-img').hasClass('-hidden')
-            && totalScrollMark > $('.learn-img').offset().top + $('.learn-img').height()/3
+            && totalScrollMark > $('.learn-img').offset().top - $('.learn-img').height()/5
         ) {
             $('.learn-img').removeClass('-hidden');
         }
-    });
+    }), 500);
 })();
