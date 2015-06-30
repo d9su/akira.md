@@ -1,0 +1,102 @@
+@import url('./includes/theme.less');
+
+@media (min-width: 800px) {
+    header {
+        padding: 30px 60px;
+
+        .menu {
+            display: none;
+        }
+    }
+
+    .header-block {
+        position: relative;
+        padding: 20px 30px 60px;
+
+        ._block-content {
+            width: 50%;
+            max-width: 460px;
+            box-sizing: border-box;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+
+            button {
+                margin: 30px 0;
+            }
+        }
+
+        img {
+            float: right;
+            margin: 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    .content-block {
+        position: relative;
+        padding: 0 60px;
+
+        ._block-content {
+            box-sizing: border-box;
+            width: 48%;
+            max-width: 420px;
+            
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+
+            text-align: left;
+
+            h2:before {
+                margin: 30px 0;
+            }
+
+            button {
+                margin: 30px 0;
+            }
+        }
+
+        img {
+            float: left;
+        }
+
+        &:nth-of-type(even) {
+            ._block-content {
+                left: 60px;
+                right: auto;
+            }
+
+            img {
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    .signup-form-container {
+        p {
+            max-width: 560px;
+        }
+
+        ._signup-form {
+            max-width: 460px;
+            margin: 0 auto;
+        }
+    }
+}

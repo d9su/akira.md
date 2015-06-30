@@ -1,40 +1,13 @@
 @import url('./includes/theme.less');
 
-@media (min-width: 640px) {
-    // header {
-    //     .menu {
-    //         display: none;
-    //     }
-    // }
-
-    // .header-block {
-    //     position: relative;
-
-    //     ._block-content {
-    //         width: 50%;
-    //         max-width: 480px;
-    //         box-sizing: border-box;
-    //         padding-right: 20px;
-    //         float: left;
-
-    //         button {
-    //             margin: 30px 0;
-    //         }
-    //     }
-
-    //     img {
-    //         float: right;
-    //         margin: 0;
-    //     }
-
-    //     &:after {
-    //         content: '';
-    //         display: block;
-    //         clear: both;
-    //     }
-    // }
+@media (min-width: 640px) and (max-width: 799px) {
+    header {
+        padding: 20px;
+    }
 
     .header-block {
+        padding: 20px 30px 60px;
+
         ._block-content {
             text-align: center;
 
@@ -49,6 +22,8 @@
     }
 
     .content-block {
+        padding: 0 30px;
+
         ._block-content {
             box-sizing: border-box;
             width: 48%;

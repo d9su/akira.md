@@ -103,21 +103,21 @@
 
         if (
             $('.explore-img').hasClass('-hidden')
-            && totalScrollMark > $('.explore-img').offset().top - $('.explore-img').height()/5
+            && totalScrollMark > $('.explore-img').offset().top - $('.explore-img').height()/8
         ) {
             $('.explore-img').removeClass('-hidden');
         } 
 
         if (
             $('.discover-img').hasClass('-hidden')
-            && totalScrollMark > $('.discover-img').offset().top - $('.discover-img').height()/5
+            && totalScrollMark > $('.discover-img').offset().top - $('.discover-img').height()/8
         ) {
             $('.discover-img').removeClass('-hidden');
         } 
 
         if (
             $('.learn-img').hasClass('-hidden')
-            && totalScrollMark > $('.learn-img').offset().top - $('.learn-img').height()/5
+            && totalScrollMark > $('.learn-img').offset().top - $('.learn-img').height()/8
         ) {
             $('.learn-img').removeClass('-hidden');
         }

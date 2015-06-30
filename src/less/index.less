@@ -63,8 +63,6 @@ button.learn {
 }
 
 header {
-    padding: @mediumGutter;
-
     .logo {
         height: 22px;
     }
@@ -148,8 +146,6 @@ header {
 }
 
 .header-block {
-    padding: @largeGutter;
-
     p {
         font-size: 18px;
         color: @headerColor;
@@ -170,7 +166,6 @@ header {
 
 .content-block {
     border-top: 1px solid #f7f8fa;
-    padding: 0 30px;
     overflow: hidden;
 
     ._block-content {
@@ -314,7 +309,7 @@ header {
 
         button {
             background: transparent;
-            padding: 18px @mediumGutter;
+            padding: 18px 20px;
             width: 50%;
             display: table-cell;
             border: 1px solid #4eb8cc;
@@ -343,7 +338,7 @@ header {
     }
 
     p {
-        margin: 40px 0;
+        margin: 40px auto;
         font-size: 15px;
         color: @mainCopyColor;
         letter-spacing: 0.5px;
@@ -356,76 +351,76 @@ header {
             display: block;
         }
     }
-}
 
-.signup-form {
-    input[type="text"], input[type="email"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+    ._signup-form {
+        input[type="text"], input[type="email"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
 
-        width: 100%;
-        border: 1px solid #e1e1e6;
-        border-radius: 3px;
+            width: 100%;
+            border: 1px solid #e1e1e6;
+            border-radius: 3px;
 
-        font-family: 'Gotham Rounded', sans-serif;
-        font-size: 14px;
-        text-rendering: optimizelegibility;
-        letter-spacing: 0.3px;
+            font-family: 'Gotham Rounded', sans-serif;
+            font-size: 14px;
+            text-rendering: optimizelegibility;
+            letter-spacing: 0.3px;
 
-        padding: @mediumGutter;
-        box-sizing: border-box;
-        margin-top: @smallGutter;
-    }
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: @smallGutter;
+        }
 
-    input[type="submit"] {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        input[type="submit"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
 
-        .general-button();
-        background-color: #6cd089;
-        border: none;
-        color: #fff;
+            .general-button();
+            background-color: #6cd089;
+            border: none;
+            color: #fff;
 
-        display: block;
-        margin: 30px auto 100px;
-    }
+            display: block;
+            margin: 30px auto 100px;
+        }
 
-    textarea {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
+        textarea {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
 
-        min-width: 100%;
-        max-width: 100%;
-        border: 1px solid #e1e1e6;
-        border-radius: 3px;
+            min-width: 100%;
+            max-width: 100%;
+            border: 1px solid #e1e1e6;
+            border-radius: 3px;
 
-        font-family: 'Gotham Rounded', sans-serif;
-        font-size: 14px;
-        text-rendering: optimizelegibility;
-        letter-spacing: 0.3px;
+            font-family: 'Gotham Rounded', sans-serif;
+            font-size: 14px;
+            text-rendering: optimizelegibility;
+            letter-spacing: 0.3px;
 
-        padding: @mediumGutter;
-        box-sizing: border-box;
-        margin-top: @smallGutter;
-    }
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: @smallGutter;
+        }
 
-    div.mce_inline_error {
-        background-color: transparent !important;
-        margin: 0 !important;
+        div.mce_inline_error {
+            background-color: transparent !important;
+            margin: 0 !important;
 
-        font-family: 'Gotham Rounded', sans-serif;
-        font-size: 14px;
-        font-weight: normal !important;
-        text-rendering: optimizelegibility;
-        letter-spacing: 0.3px;
-        color: @formErrorColor !important;
-    }
+            font-family: 'Gotham Rounded', sans-serif;
+            font-size: 14px;
+            font-weight: normal !important;
+            text-rendering: optimizelegibility;
+            letter-spacing: 0.3px;
+            color: @formErrorColor !important;
+        }
 
-    input.mce_inline_error {
-        border-color: @formErrorColor !important;
+        input.mce_inline_error {
+            border-color: @formErrorColor !important;
+        }
     }
 }
 
