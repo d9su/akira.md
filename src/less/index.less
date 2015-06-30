@@ -76,6 +76,7 @@ header {
         padding: 0px;
         float: right;
         text-indent: 9999px;
+        overflow: hidden;
     }
 }
 
@@ -101,16 +102,18 @@ header {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translateY(-50%) translateX(-50%);
         -webkit-transform: translateY(-50%) translateX(-50%);
+        transform: translateY(-50%) translateX(-50%);
 
         li {
-            position: relative;
             opacity: 1;
-            left: 0%;
             margin: 30px;
 
-            transition: left 0.1s ease-in, opacity 0.1s ease-in;
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+
+            -webkit-transition: -webkit-transform 0.1s, opacity 0.1s;
+            transition: transform 0.1s, opacity 0.1s;
 
             &._home { transition-delay: 0.2s }
             &._about { transition-delay: 0.3s }
@@ -137,7 +140,9 @@ header {
 
         ._nav-list li {
             opacity: 0;
-            left: 10%;
+            -webkit-transform: translateX(10%);
+            transform: translateX(10%);
+            -webkit-transition: none;
             transition: none;
         }
     }
@@ -219,18 +224,20 @@ header {
     }
 
     img {
-        position: relative;
-        top: 0;
         opacity: 1;
         display: block;
         width: 300px;
         margin: 60px auto 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
 
-        transition: top 0.5s ease-out, opacity 1s ease-out;
+        -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+        transition: transform 0.5s, opacity 0.5s;
 
         &.-hidden {
             opacity: 0;
-            top: 200px;
+            -webkit-transform: translateY(200px);
+            transform: translateY(200px);            
         }
     }
 

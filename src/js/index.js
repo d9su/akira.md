@@ -97,7 +97,7 @@
     }
 
     $(window).on('scroll', debounce(function () {
-        var scrollTop = $('body').scrollTop(),
+        var scrollTop = $(window).scrollTop(),
             viewportHeight = $(window).height(),
             totalScrollMark = scrollTop + viewportHeight;
 
