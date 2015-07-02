@@ -1,56 +1,8 @@
-// Typography
-#main-font {
-    @mainFontFamily: 'Source Sans Pro', sans-serif;
-    @baseFontSize: 15px;            // 16px * 0.9375rem = 15px
-    @minimumReadableFontSize: 12px; // 16px * 0.75rem = 12px
-    @fontScaleFactor: 1.333;
-    @baseLineHeight: 1.5 * @baseFontSize;
-    @normalFontWeight: 400;
-    @boldFontWeight: 600;
-
-    // @note should not go lower than -1
-    .calculate-size-and-weight(@fontWeight, @note) when (@note = -1) and (@fontWeight = normal) {
-        @size: @minimumReadableFontSize;
-        @weight: @normalFontWeight;
-    }
-    .calculate-size-and-weight(@fontWeight, @note) when (@note > -1) and (@fontWeight = normal) {
-        @size: @baseFontSize * pow(@fontScaleFactor, @note);
-        @weight: @normalFontWeight;
-    }
-    .calculate-size-and-weight(@fontWeight, @note) when (@note = -1) and (@fontWeight = bold) {
-        @size: @minimumReadableFontSize;
-        @weight: @boldFontWeight;
-    }
-    .calculate-size-and-weight(@fontWeight, @note) when (@note > -1) and (@fontWeight = bold) {
-        @size: @baseFontSize * pow(@fontScaleFactor, @note);
-        @weight: @boldFontWeight;
-    }
-
-    .type-scale (@fontWeight: normal, @note: 0) {
-        font-family: @mainFontFamily;
-
-        .calculate-size-and-weight(@fontWeight, @note);
-        font-weight: @weight;
-        font-size: @size;
-        line-height: @baseLineHeight * (ceil(@size / @baseLineHeight));
-    }
-
-    // For cases when you have to use it for vertically centering text using the line-height hack...
-    .type-scale-with-custom-line-height (@lineHeight, @fontWeight: normal, @note: 0) {
-        font-family: @mainFontFamily;
-        line-height: @lineHeight;
-
-        .calculate-size-and-weight(@fontWeight, @note);
-        font-weight: @weight;
-        font-size: @size;
-    }
-}
-
 // random vars
 @smallGutter: 15px;
 @mediumGutter: 20px;
 @largeGutter: 32px;
-@headerColor: #4b595e;
-@quoteColor: #4eb8cc;
-@mainCopyColor: #59666b;
+@headerColor: #253B43;
+@quoteColor: #51BED3;
+@mainCopyColor: #536065;
 @formErrorColor: #eb684b;

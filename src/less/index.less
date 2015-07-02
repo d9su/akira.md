@@ -92,8 +92,8 @@ header {
         list-style: none;
         margin: 0;
         padding: 0;
+        width: 100%;
 
-        color: #fff;
         font-size: 24px;
         line-height: 30px;
         text-align: center;
@@ -114,10 +114,15 @@ header {
             -webkit-transition: -webkit-transform 0.1s, opacity 0.1s;
             transition: transform 0.1s, opacity 0.1s;
 
+            > a {
+                color: #fff;
+                text-decoration: none;
+            }
+
             &._home { transition-delay: 0.2s }
             &._about { transition-delay: 0.3s }
             &._features { transition-delay: 0.4s }
-            &._career { transition-delay: 0.5s }
+            &._careers { transition-delay: 0.5s }
         }
     }
 
@@ -173,56 +178,78 @@ header {
     overflow: hidden;
 
     ._block-content {
-        h2 {
+        > h2 {
             margin: 80px 0 20px;
 
-            &:before {
-                content: '';
-                display: block;
-                height: 60px;
-                width: 60px;
-                border-radius: 12px;
-            }
+            &.icon {
+                &:before {
+                    content: '';
+                    display: block;
+                    height: 60px;
+                    width: 60px;
+                    border-radius: 12px;
+                }
 
-            &.-advice:before {
-                background: #6cd089;
-                background-image: url('img/i/bolt@2x.png');
-                background-repeat: no-repeat;
-                background-size: 50%;
-                background-position: 15px 12px;
-            }
+                &.-advice:before {
+                    background: #6cd089;
+                    background-image: url('img/i/bolt@2x.png');
+                    background-repeat: no-repeat;
+                    background-size: 50%;
+                    background-position: 15px 12px;
+                }
 
-            &.-record:before {
-                background: #4eb8cc;
-                background-image: url('img/i/bullets@2x.png');
-                background-repeat: no-repeat;
-                background-size: 50%;
-                background-position: 15px 21px;
-            }
+                &.-record:before {
+                    background: #4eb8cc;
+                    background-image: url('img/i/bullets@2x.png');
+                    background-repeat: no-repeat;
+                    background-size: 50%;
+                    background-position: 15px 21px;
+                }
 
-            &.-assistant:before {
-                background: #a182b6;
-                background-image: url('img/i/avatar@2x.png');
-                background-repeat: no-repeat;
-                background-size: 50%;
-                background-position: 15px 15px;
+                &.-assistant:before {
+                    background: #a182b6;
+                    background-image: url('img/i/avatar@2x.png');
+                    background-repeat: no-repeat;
+                    background-size: 50%;
+                    background-position: 15px 15px;
+                }
             }
         }
 
-        p {
+        > p {
             font-size: 15px;
-            color: @headerColor;
+            color: @mainCopyColor;
             letter-spacing: 0.3px;
             text-rendering: optimizelegibility;
             line-height: 22px;
         }
 
-        button {
+        > button {
             display: block;
+        }
+
+        > img {
+            width: 300px;
+            margin: 30px auto;
+
+        }
+
+        ._content-copy {
+            text-align: left;
+            color: @mainCopyColor;
+            font-size: 15px;
+            letter-spacing: 0.3px;
+            text-rendering: optimizelegibility;
+            line-height: 22px;
+            margin-bottom: 100px;
+        }
+
+        &.-hero {
+            margin: 140px 0;
         }
     }
 
-    img {
+    > img {
         opacity: 1;
         display: block;
         width: 300px;
@@ -440,8 +467,15 @@ footer {
         font-size: 14px;
     }
 
-    .logo {
+    ._white-logo-link {
+        background-image: url("/img/whiteLogo@2x.png");
+        background-size: contain;
+        background-repeat: no-repeat;
         height: 24px;
+        width: 117px;
+        display: inline-block;
+        overflow: hidden;
+        text-indent: 999px;
         float: left;
     }
 
