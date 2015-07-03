@@ -2,41 +2,47 @@
 
 @media (max-width: 639px) {
     header {
-        padding: 20px;
+        ._block-wrapper {
+            padding: 20px;
+        }
     }
 
     .header-block {
-        padding: 20px 30px 60px;
+        ._block-wrapper {
+            padding: 20px 30px 60px;
 
-        ._block-content {
-            text-align: center;
+            ._block-content {
+                text-align: center;
 
-            button {
-                margin: 30px auto 60px;
+                button {
+                    margin: 30px auto 60px;
+                }
             }
-        }
 
-        img {
-            margin: 60px auto 90px;
+            img {
+                margin: 60px auto 90px;
+            }
         }
     }
 
     .content-block {
-        padding: 0 30px;
+        ._block-wrapper {
+            padding: 0 30px;
 
-        ._block-content {
-            text-align: center;
+            ._block-content {
+                text-align: center;
 
-            > h2 {
-                margin: 80px 0 20px;
+                > h2 {
+                    margin: 80px 0 20px;
 
-                &.-icon:before {
-                    margin: @largeGutter auto;
+                    &.icon:before {
+                        margin: @largeGutter auto;
+                    }
                 }
-            }
 
-            button {
-                margin: 30px auto 60px;
+                button {
+                    margin: 30px auto 60px;
+                }
             }
         }
     }

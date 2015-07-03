@@ -1,6 +1,15 @@
 (function () {
     'use strict';
 
+    $('.menu-overlay li').each(function (index, item) {
+        var currentDelay = $(item).css('transition-delay');
+        var transitionDelay = currentDelay === '0s' ? '0.1s' : currentDelay;
+        var delaySecond = transitionDelay.slice(0, -1);
+
+        $(item).css('transition-delay', parseFloat(delaySecond) + 0.1 + 's');
+        $(item).next().css('transition-delay', parseFloat(delaySecond) + 0.1 + 's');
+    });
+
     /*
         Menu overlay
     */
