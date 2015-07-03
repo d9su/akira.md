@@ -68,11 +68,18 @@ header {
         max-width: 960px;
         margin: 0 auto;
 
-        .logo {
+        ._logo-link {
+            background-image: url("/img/Logo@2x.png");
+            background-size: contain;
+            background-repeat: no-repeat;
             height: 22px;
+            width: 115px;
+            display: inline-block;
+            overflow: hidden;
+            text-indent: 999px;
         }
 
-        .menu {
+        ._menu {
             width: 26px;
             height: 18px;
             background: url('img/i/menu@2x.png') no-repeat;
@@ -82,6 +89,45 @@ header {
             float: right;
             text-indent: 9999px;
             overflow: hidden;
+        }
+
+        .-extra {
+            float: right;
+            font-size: 13px;
+
+            > a {
+                text-decoration: none;
+                color: @mainCopyColor;
+            }
+
+            > button {
+                .general-small-button();
+                background-color: transparent;
+                border: 1px solid #6cd089;
+                color: #6cd089;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    &.-about {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        ._logo-link {
+            background-image: url("/img/whiteLogo@2x.png");
+        }
+
+        .-extra {
+            > a {
+                color: #fff;
+            }
+
+            > button {
+                color: #fff;
+                border: 1px solid #fff;
+            }
         }
     }
 }

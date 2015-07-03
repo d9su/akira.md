@@ -13,7 +13,7 @@
     /*
         Menu overlay
     */
-    $('header .menu').on('click', function () {
+    $('header ._menu').on('click', function () {
         $('body').addClass('-no-scroll');
         $('.menu-overlay').removeClass('-hidden');
     });

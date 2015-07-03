@@ -9,8 +9,8 @@
             width: 33%;
             padding-right: 20px;
 
-            & + ._tile {
-
+            &:nth-of-type(3n+1) {
+                clear: left;
             }
         }
 
@@ -26,6 +26,10 @@
                 &:nth-of-type(even) {
                     float: right;
                     padding-left: 60px;
+                }
+
+                &:nth-of-type(3n+1) {
+                    clear: none;
                 }
             }
 
