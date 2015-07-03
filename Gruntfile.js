@@ -5,8 +5,8 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: 'src/',
                     expand: true,
-                    src: [ '*.html', '**/*.js' ],
-                    dest: '.tmp/'
+                    src: [ '*.html', 'js/**/*.js', 'img/**/*', 'fonts/**/*' ],
+                    dest: 'dist/'
                 }]
             }
         },
@@ -22,10 +22,34 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        jshint: {
+            dev: {
+                options: {
+                    jshintrc: true,
+                    ignores: [ 'src/js/**/zepto.min.js' ]
+                },
+                src: [ 'src/js/**/*.js' ]
+            }
+        },
+        concat: {
+            build: {
+                files: [{
+                    src: [ '.tmp/css/*.css' ],
+                    dest: 'dist/style.css'
+                }]
+            }
+        },
         watch: {
             less: {
                 files: 'src/less/**/*.less',
-                tasks: [ 'less:dev' ],
+                tasks: [ 'less:dev', 'concat:build' ],
+                options: {
+                  livereload: true
+                }
+            },
+            js: {
+                files: 'src/js/**/*.js',
+                tasks: [ 'jshint:dev', 'copy:dev' ],
                 options: {
                   livereload: true
                 }
@@ -42,7 +66,7 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     port: 9090,
-                    base: '.tmp'
+                    base: 'dist'
                 }
             }
         }
@@ -55,5 +79,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
 
-    grunt.registerTask('serve', [ 'copy:dev', 'less:dev', 'connect:dev', 'watch' ]);
+    grunt.registerTask('serve', [ 'copy:dev', 'less:dev', 'concat:build', 'connect:dev', 'watch' ]);
 };

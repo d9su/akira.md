@@ -1,0 +1,74 @@
+@import url('./includes/theme.less');
+
+@media (max-width: 639px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-block {
+        padding: 20px 30px 60px;
+
+        ._block-content {
+            text-align: center;
+
+            button {
+                margin: 30px auto 60px;
+            }
+        }
+
+        img {
+            margin: 60px auto 90px;
+        }
+    }
+
+    .content-block {
+        padding: 0 30px;
+
+        ._block-content {
+            text-align: center;
+
+            > h2 {
+                margin: 80px 0 20px;
+
+                &.-icon:before {
+                    margin: @largeGutter auto;
+                }
+            }
+
+            button {
+                margin: 30px auto 60px;
+            }
+        }
+    }
+
+    footer {
+        h3 {
+            margin: 50px 0 25px;
+        }
+
+        .site-map {
+            clear: both;
+            width: 30%;
+        }
+
+        .location {
+            width: 69%;
+        }
+
+        .address {
+            clear: both;
+
+            h3 {
+                margin: 40px 0 10px;
+            }
+        }
+
+        .contact {
+            clear: both;
+
+            h3 {
+                margin: 20px 0 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,136 @@
+@import url('./includes/theme.less');
+
+@media (min-width: 640px) and (max-width: 799px) {
+    header {
+        padding: 20px;
+    }
+
+    .header-block {
+        padding: 20px 30px 60px;
+
+        ._block-content {
+            text-align: center;
+
+            button {
+                margin: 30px auto 60px;
+            }
+        }
+
+        img {
+            margin: 60px auto 90px;
+        }
+    }
+
+    .content-block {
+        padding: 0 30px;
+
+        ._block-content {
+            box-sizing: border-box;
+            width: 48%;
+            max-width: 480px;
+            padding-left: 30px;
+            float: right;
+
+            text-align: left;
+
+            > h2 {
+                margin: 140px 0 20px;
+
+                &.-icon:before {
+                    margin: 30px 0;
+                }
+            }
+
+            > button {
+                margin: 30px 0;
+            }
+        }
+
+        > img {
+            float: left;
+        }
+
+        &.-img-right {
+            ._block-content {
+                padding-left: 0;
+                padding-right: 30px;
+                float: left;
+            }
+
+            img {
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        &.-center {
+            ._block-content {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                float: none;
+                text-align: center;
+            }
+
+            img.-illustration {
+                width: 100%;
+                max-width: 640px;
+                float: none;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    footer {
+        h3 {
+            margin: 0 0 30px 0;
+        }
+
+        .social-links {
+            position: absolute;
+            right: 20px;
+        }
+
+        .site-map {
+            float: left;
+            width: 80px;
+            margin-left: 30px;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                margin-top: 15px;
+                opacity: 0.6;
+            }
+        }
+
+        .location {
+            img {
+                width: 100%;
+                max-width: 185px;
+            }
+        }
+
+        .address {
+            margin-left: 20px;
+
+            h3 {
+                margin: 46px 0 10px 0;
+            }
+        }
+
+        .contact {
+            margin-left: 20px;
+
+            h3 {
+                margin: 20px 0 10px 0;
+            }
+        }
+    }
+}

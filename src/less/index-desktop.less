@@ -1,0 +1,198 @@
+@import url('./includes/theme.less');
+
+@media (min-width: 800px) {
+    header {
+        padding: 30px 60px;
+
+        .menu {
+            display: none;
+        }
+    }
+
+    .header-block {
+        position: relative;
+        padding: 20px 30px 60px;
+
+        ._block-content {
+            width: 50%;
+            max-width: 460px;
+            box-sizing: border-box;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+
+            button {
+                margin: 30px 0;
+            }
+        }
+
+        img {
+            float: right;
+            margin: 0;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        &.-about {
+            ._block-content {
+                width: 100%;
+                max-width: 600px;
+                text-align: center;
+                left: 50%;
+                transform: translateY(-50%) translateX(-50%);
+                -webkit-transform: translateY(-50%) translateX(-50%);
+            }
+        }
+    }
+
+    .content-block {
+        position: relative;
+        padding: 0 60px;
+
+        ._block-content {
+            box-sizing: border-box;
+            width: 48%;
+            max-width: 420px;
+            
+            position: absolute;
+            top: 50%;
+            right: 60px;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+
+            text-align: left;
+
+            > h2 {
+                margin: 140px 0 20px;
+
+                &.-icon:before {
+                    margin: 30px 0;
+                }
+            }
+
+            button {
+                margin: 30px 0;
+            }
+        }
+
+        > img {
+            float: left;
+        }
+
+        &.-img-right {
+            ._block-content {
+                left: 60px;
+                right: auto;
+            }
+
+            > img {
+                display: inline-block;
+                float: right;
+            }
+        }
+
+        &.-center {
+
+            ._block-content {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                float: none;
+                text-align: center;
+                position: static;
+                -webkit-transform: none;
+                transform: none;
+
+                > p {
+                    margin-bottom: 60px;
+                }
+
+                > img.-illustration {
+                    width: 440px;
+                    margin: 0 40px 40px 0;
+                    float: left;
+                }
+            }
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+
+    .signup-form-container {
+        p {
+            max-width: 560px;
+        }
+
+        ._signup-form {
+            max-width: 460px;
+            margin: 0 auto;
+        }
+    }
+
+    footer {
+        h3 {
+            margin: 0 0 30px 0;
+        }
+
+        .social-links {
+            position: absolute;
+            right: 20px;
+        }
+
+        .site-map {
+            float: left;
+            box-sizing: border-box;
+            width: 20%;
+            padding-left: 75px;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: #fff;
+                margin-top: 15px;
+                opacity: 0.6;
+            }
+        }
+
+        .location {
+            box-sizing: border-box;
+            width: 40%;
+            padding-left: 55px;
+
+            img {
+                width: 100%;
+                max-width: 220px;
+            }
+        }
+
+        .address {
+            box-sizing: border-box;
+            width: 20%;
+            padding-left: 40px;
+
+            h3 {
+                margin: 46px 0 10px 0;
+            }
+        }
+
+        .contact {
+            box-sizing: border-box;
+            width: 20%;
+            padding-left: 40px;
+
+            h3 {
+                margin: 20px 0 10px 0;
+            }
+        }
+    }
+}
