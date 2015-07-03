@@ -4,6 +4,10 @@
     header {
         ._block-wrapper {
             padding: 20px;
+
+            ._extra {
+                display: none;
+            }
         }
     }
 
@@ -21,6 +25,17 @@
 
             img {
                 margin: 60px auto 90px;
+            }
+        }
+
+        &.-about {
+            ._block-wrapper {
+                ._block-content {
+                    position: relative;
+                    top: 50%;
+                    -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+                }
             }
         }
     }
