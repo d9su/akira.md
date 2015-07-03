@@ -13,7 +13,7 @@
     /*
         Menu overlay
     */
-    $('header .menu').on('click', function () {
+    $('header ._menu').on('click', function () {
         $('body').addClass('-no-scroll');
         $('.menu-overlay').removeClass('-hidden');
     });
@@ -46,7 +46,7 @@
         };
     }
 
-    $(window).on('scroll', debounce(function () {
+    function scrollHandler() {
         var scrollTop = $(window).scrollTop(),
             viewportHeight = $(window).height(),
             totalScrollMark = scrollTop + viewportHeight;
@@ -71,5 +71,9 @@
         ) {
             $('.learn-img').removeClass('-hidden');
         }
-    }), 500);
+    }
+
+    scrollHandler();
+
+    $(window).on('scroll', debounce(scrollHandler), 500);
 })();

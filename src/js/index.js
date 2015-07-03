@@ -13,7 +13,7 @@
     /*
         Menu overlay
     */
-    $('header .menu').on('click', function () {
+    $('header ._menu').on('click', function () {
         $('body').addClass('-no-scroll');
         $('.menu-overlay').removeClass('-hidden');
     });
@@ -33,9 +33,13 @@
         if ($(this).data('type') === 'company') {
             $('.signup-form-container ._form-description p._company').addClass('-active');
             $('.signup-form-container ._form-description p._individual').removeClass('-active');
+            $('.signup-form-container ._signup-form.-company').addClass('-active');
+            $('.signup-form-container ._signup-form.-individual').removeClass('-active');
         } else {
             $('.signup-form-container ._form-description p._company').removeClass('-active');
             $('.signup-form-container ._form-description p._individual').addClass('-active');
+            $('.signup-form-container ._signup-form.-company').removeClass('-active');
+            $('.signup-form-container ._signup-form.-individual').addClass('-active');
         }
     });
 
@@ -105,7 +109,7 @@
         };
     }
 
-    $(window).on('scroll', debounce(function () {
+    function scrollHandler() {
         var scrollTop = $(window).scrollTop(),
             viewportHeight = $(window).height(),
             totalScrollMark = scrollTop + viewportHeight;
@@ -130,5 +134,9 @@
         ) {
             $('.learn-img').removeClass('-hidden');
         }
-    }), 500);
+    }
+
+    scrollHandler();
+
+    $(window).on('scroll', debounce(scrollHandler), 500);
 })();
