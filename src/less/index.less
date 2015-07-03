@@ -14,29 +14,46 @@ h1 {
     font-size: 36px;
     color: @headerColor;
     font-weight: bold;
-    letter-spacing: 0.3px;
     text-rendering: optimizelegibility;
-    line-height: 50px;
+    line-height: 46px;
+    -webkit-font-smoothing: antialiased;
 }
 
 h2 {
     font-size: 24px;
     color: @headerColor;
     font-weight: bold;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     text-rendering: optimizelegibility;
-    line-height: 30px;
+    line-height: 32px;
+    -webkit-font-smoothing: antialiased;
 }
 
 h3 {
     font-size: 14px;
     letter-spacing: 0.3px;
     line-height: 17px;
+    -webkit-font-smoothing: antialiased;
 }
 
 button.signup {
     .general-button();
     background-color: #6cd089;
+    border: none;
+    color: #fff;
+}
+
+button:hover.signup {
+    .general-button();
+    background-color: #5DB977;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:active.signup {
+    .general-button();
+    background-color: #5DB977;
     border: none;
     color: #fff;
 }
@@ -48,6 +65,20 @@ button.explore {
     color: #6cd089;
 }
 
+button:hover.explore {
+    .general-button();
+    border: 1px solid #5DB977;
+    color: #5DB977;
+    cursor: pointer;
+}
+
+button:active.explore {
+    .general-button();
+    border: 1px solid #5DB977;
+    color: #5DB977;
+    outline: none;
+}
+
 button.discover {
     .general-button();
     background-color: transparent;
@@ -55,11 +86,43 @@ button.discover {
     color: #4eb8cc;
 }
 
+button:hover.discover {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #44A0B2;
+    color: #44A0B2;
+    cursor: pointer;
+}
+
+button:active.discover {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #44A0B2;
+    color: #44A0B2;
+    outline: none;
+}
+
 button.learn {
     .general-button();
     background-color: transparent;
     border: 1px solid #a182b6;
     color: #a182b6;
+}
+
+button:hover.learn {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #896D9D;
+    color: #896D9D;
+    cursor: pointer;
+}
+
+button:active.learn {
+    .general-button();
+    background-color: transparent;
+    border: 1px solid #896D9D;
+    color: #896D9D;
+    outline: none;
 }
 
 header {
@@ -112,6 +175,10 @@ header {
         }
     }
 
+    .logo {
+        height: 20px;
+    }
+
     &.-about {
         position: absolute;
         width: 100%;
@@ -156,6 +223,7 @@ header {
         font-size: 24px;
         line-height: 30px;
         text-align: center;
+        -webkit-font-smoothing: antialiased;
 
         position: absolute;
         top: 50%;
@@ -170,8 +238,8 @@ header {
             -webkit-transform: translateX(0);
             transform: translateX(0);
 
-            -webkit-transition: -webkit-transform 0.1s, opacity 0.1s;
-            transition: transform 0.1s, opacity 0.1s;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s, opacity 0.1s;
 
             > a {
                 color: #fff;
@@ -205,7 +273,7 @@ header {
         }
     }
 
-    transition: left 0.1s ease-in;
+    transition: left 0.2s ease-in;
 }
 
 .header-block {
@@ -220,6 +288,7 @@ header {
             letter-spacing: 0.3px;
             text-rendering: optimizelegibility;
             line-height: 30px;
+            -webkit-font-smoothing: antialiased;
         }
 
         > button {
@@ -256,7 +325,7 @@ header {
 }
 
 .content-block {
-    border-top: 1px solid #f7f8fa;
+    border-top: 1px solid #ECEDEE;
     overflow: hidden;
     
     ._block-wrapper {
@@ -280,8 +349,8 @@ header {
                         background: #6cd089;
                         background-image: url('img/i/bolt@2x.png');
                         background-repeat: no-repeat;
-                        background-size: 50%;
-                        background-position: 15px 12px;
+                        background-size: 40%;
+                        background-position: 18px 16px;
                     }
 
                     &.-record:before {
@@ -296,18 +365,18 @@ header {
                         background: #a182b6;
                         background-image: url('img/i/avatar@2x.png');
                         background-repeat: no-repeat;
-                        background-size: 50%;
-                        background-position: 15px 15px;
+                        background-size: 40%;
+                        background-position: 18px 18px;
                     }
                 }
             }
 
             > p {
-                font-size: 15px;
+                font-size: 14px;
                 color: @mainCopyColor;
-                letter-spacing: 0.3px;
                 text-rendering: optimizelegibility;
                 line-height: 22px;
+                -webkit-font-smoothing: antialiased;
             }
 
             > button {
@@ -328,6 +397,7 @@ header {
                 text-rendering: optimizelegibility;
                 line-height: 22px;
                 margin-bottom: 100px;
+                -webkit-font-smoothing: antialiased;
             }
 
             &.-hero {
@@ -343,13 +413,13 @@ header {
             -webkit-transform: translateY(0);
             transform: translateY(0);
 
-            -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-            transition: transform 0.5s, opacity 0.5s;
+            -webkit-transition: -webkit-transform 0.8s, opacity 0.8s;
+            transition: transform 0.8s, opacity 0.5s;
 
             &.-hidden {
                 opacity: 0;
-                -webkit-transform: translateY(200px);
-                transform: translateY(200px);            
+                -webkit-transform: translateY(150px);
+                transform: translateY(150px);
             }
         }
     }
@@ -372,20 +442,22 @@ header {
         overflow: hidden;
 
         ._quote {
-            position: absolute;
-            width: 100%;
+            margin: auto;
+            max-width: 620px;
             top: 0;
             bottom: 0;
 
             p {
-                font-size: 18px;
+                font-size: 22px;
                 color: @quoteColor;
                 letter-spacing: 0.3px;
-                line-height: 26px;
+                line-height: 36px;
                 text-align: center;
                 font-style: italic;
                 max-width: 620px;
                 margin: 0 auto;
+                text-rendering: optimizelegibility;
+                -webkit-font-smoothing: antialiased;
             }
 
             span {
@@ -395,6 +467,8 @@ header {
                 line-height: 20px;
                 display: block;
                 text-align: center;
+                text-rendering: optimizelegibility;
+                -webkit-font-smoothing: antialiased;
             }
 
             &.-prev {
@@ -431,7 +505,7 @@ header {
 
         button {
             background: transparent;
-            padding: 18px 20px;
+            padding: 19px 20px 18px 20px;
             width: 50%;
             display: table-cell;
             border: 1px solid #4eb8cc;
@@ -441,7 +515,9 @@ header {
 
             font-family: 'Gotham Rounded', sans-serif;
             font-size: 14px;
+            font-weight: bold;
             text-rendering: optimizelegibility;
+            -webkit-font-smoothing: antialiased;
             letter-spacing: 0.3px;
 
             & + button {
@@ -453,21 +529,23 @@ header {
             }
 
             &.-active {
-                background: #4eb8cc;
+                background: #44A0B2;
                 color: #fff;
+                outline: none;
             }
         }
     }
 
     p {
-        margin: 40px auto;
-        font-size: 15px;
+        margin: 20px auto;
+        font-size: 14px;
         color: @mainCopyColor;
         letter-spacing: 0.5px;
         text-rendering: optimizelegibility;
         line-height: 22px;
         text-align: center;
         display: none;
+        -webkit-font-smoothing: antialiased;
 
         &.-active {
             display: block;
@@ -492,6 +570,7 @@ header {
             font-size: 14px;
             text-rendering: optimizelegibility;
             letter-spacing: 0.3px;
+            -webkit-font-smoothing: antialiased;
 
             padding: 20px;
             box-sizing: border-box;
@@ -526,6 +605,7 @@ header {
             font-size: 14px;
             text-rendering: optimizelegibility;
             letter-spacing: 0.3px;
+            -webkit-font-smoothing: antialiased;
 
             padding: 20px;
             box-sizing: border-box;
@@ -542,6 +622,7 @@ header {
             text-rendering: optimizelegibility;
             letter-spacing: 0.3px;
             color: @formErrorColor !important;
+            -webkit-font-smoothing: antialiased;
         }
 
         input.mce_inline_error {
@@ -574,7 +655,10 @@ footer {
     background: #253b43;
     font-size: 14px;
     color: #fff;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
 
+<<<<<<< HEAD
     ._block-wrapper {
         box-sizing: border-box;
         padding: 60px @largeGutter 80px;
@@ -590,7 +674,7 @@ footer {
             background-image: url("/img/whiteLogo@2x.png");
             background-size: contain;
             background-repeat: no-repeat;
-            height: 24px;
+            height: 20px;
             width: 117px;
             display: inline-block;
             overflow: hidden;
