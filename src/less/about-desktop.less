@@ -1,0 +1,49 @@
+@import url('./includes/theme.less');
+
+@media (min-width: 800px) {
+    .tiles {
+        margin: 60px 0 100px;
+
+        ._tile {
+            box-sizing: border-box;
+            width: 33%;
+            padding-right: 20px;
+
+            & + ._tile {
+
+            }
+        }
+
+        &.-with-img {
+            ._tile {
+                padding-right: 0;
+
+                &:nth-of-type(odd) {
+                    clear: both;
+                    padding-right: 60px;
+                }
+
+                &:nth-of-type(even) {
+                    float: right;
+                    padding-left: 60px;
+                }
+            }
+
+            > img {
+                position: absolute;
+                left: 50%;
+                margin: 0 0 0 -150px;
+            }
+        }
+
+        ._big-tile {
+            box-sizing: border-box;
+            width: 30%;
+            float: left;
+
+            & + ._big-tile {
+                margin-left: 5%;
+            }
+        }
+    }
+}

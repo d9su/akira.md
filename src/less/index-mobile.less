@@ -27,8 +27,12 @@
         ._block-content {
             text-align: center;
 
-            h2:before {
-                margin: @largeGutter auto;
+            > h2 {
+                margin: 80px 0 20px;
+
+                &.-icon:before {
+                    margin: @largeGutter auto;
+                }
             }
 
             button {

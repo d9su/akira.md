@@ -33,20 +33,24 @@
 
             text-align: left;
 
-            h2:before {
-                margin: 30px 0;
+            > h2 {
+                margin: 140px 0 20px;
+
+                &.-icon:before {
+                    margin: 30px 0;
+                }
             }
 
-            button {
+            > button {
                 margin: 30px 0;
             }
         }
 
-        img {
+        > img {
             float: left;
         }
 
-        &:nth-of-type(even) {
+        &.-img-right {
             ._block-content {
                 padding-left: 0;
                 padding-right: 30px;
@@ -56,6 +60,22 @@
             img {
                 display: inline-block;
                 float: right;
+            }
+        }
+
+        &.-center {
+            ._block-content {
+                width: 100%;
+                max-width: 100%;
+                padding: 0;
+                float: none;
+                text-align: center;
+            }
+
+            img.-illustration {
+                width: 100%;
+                max-width: 640px;
+                float: none;
             }
         }
 

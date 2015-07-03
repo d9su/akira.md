@@ -7,10 +7,7 @@
 }
 
 .tiles {
-    margin: 60px 20px 100px 0;
-
     ._tile {
-        width: 50%;
         float: left;
         font-size: 15px;
         letter-spacing: 0.3px;
@@ -44,22 +41,11 @@
         &.-preference:before { background-image: url('img/i/cog@2x.png'); }
         &.-manage:before { background-image: url('img/i/mailstats@2x.png'); }
         &.-access:before { background-image: url('img/i/book@2x.png'); }
-
-        &:nth-of-type(odd) {
-            clear: left;
-        }
-
-        &:nth-of-type(even) {
-            position: relative;
-            left: 20px;
-        }
     }
 
     ._big-tile {
         background: #fff;
         box-shadow: 0 1px 5px rgba(255, 255, 255, 0.5);
-        margin-bottom: 30px;
-        margin-right: -20px;
         padding: 40px 30px;
         text-align: center;
 
@@ -97,7 +83,6 @@
             opacity: 1;
             display: block;
             width: 300px;
-            margin: 60px auto 0;
             -webkit-transform: translateY(0);
             transform: translateY(0);
 
@@ -110,6 +95,10 @@
                 transform: translateY(200px);            
             }
         }
+    }
+
+    &.-big {
+        margin: 60px 0 100px;
     }
 
     &:after {
