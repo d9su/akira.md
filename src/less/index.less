@@ -454,7 +454,6 @@ header {
                 line-height: 36px;
                 text-align: center;
                 font-style: italic;
-                max-width: 620px;
                 margin: 0 auto;
                 text-rendering: optimizelegibility;
                 -webkit-font-smoothing: antialiased;
@@ -469,6 +468,31 @@ header {
                 text-align: center;
                 text-rendering: optimizelegibility;
                 -webkit-font-smoothing: antialiased;
+                margin-top: 25px;
+
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    margin-right: 15px;
+                    width: 32px;
+                    height: 32px;
+                    position: relative;
+                    top: 10px;
+                }
+
+                &.-alex-de-winne {
+                    &:before {
+                        background-image: url('img/i/avatar_aaron@2x.png');
+                        background-size: cover;
+                    }
+                }
+
+                &.-dustin {
+                    &:before {
+                        background-image: url('img/i/avatar_dustin@2x.png');
+                        background-size: cover;
+                    }
+                }
             }
 
             &.-prev {
