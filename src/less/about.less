@@ -1,5 +1,56 @@
 @import url('./includes/theme.less');
 
+.nav-bar {
+    height: 70px;
+
+    > ul {
+        height: 70px;
+        width: 100%;
+        display: table;
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        background: #fff;
+        border-bottom: 1px solid #f7f8fa;
+        z-index: 999;
+
+        > li {
+            width: 120px;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+
+            > a {
+                text-decoration: none;
+                color: @mainCopyColor;
+            }
+
+            &.-active {
+                border-bottom: 2px solid #E07B5E;
+            }
+        }
+
+        &:before {
+            content: '';
+            display: table-cell;
+        }
+
+        &:after {
+            content: '';
+            display: table-cell;
+        }
+    }
+
+    &.-sticky {
+        > ul {
+            position: fixed;
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
 .content-divider {
     border-top: 1px solid #E07B5E;
     width: 60px;
