@@ -1,6 +1,10 @@
 (function () {
     'use strict';
 
+    $('header button.-signup').on('click', function() {
+        window.location.href = '#signup';
+    });
+
     $('.menu-overlay li').each(function (index, item) {
         var currentDelay = $(item).css('transition-delay');
         var transitionDelay = currentDelay === '0s' ? '0.1s' : currentDelay;
@@ -51,6 +55,38 @@
             viewportHeight = $(window).height(),
             totalScrollMark = scrollTop + viewportHeight;
 
+        /*
+            Sticky menu
+        */
+        if (scrollTop > $('.nav-bar').offset().top) {
+            $('.nav-bar').addClass('-sticky');
+        } else {
+            $('.nav-bar').removeClass('-sticky');
+        }
+
+        if (totalScrollMark > $('#on-demand').offset().top + 200) {
+            $('.nav-bar ._on-demand').addClass('-active');
+            $('.nav-bar ._on-demand').siblings().removeClass('-active');
+        }
+
+        if (totalScrollMark > $('#features').offset().top + 200) {
+            $('.nav-bar ._features').addClass('-active');
+            $('.nav-bar ._features').siblings().removeClass('-active');
+        }
+
+        if (totalScrollMark > $('#assistant').offset().top + 200) {
+            $('.nav-bar ._assistant').addClass('-active');
+            $('.nav-bar ._assistant').siblings().removeClass('-active');
+        }
+
+        if (totalScrollMark > $('#careers').offset().top + 200) {
+            $('.nav-bar ._careers').addClass('-active');
+            $('.nav-bar ._careers').siblings().removeClass('-active');
+        }
+
+        /*
+            Scroll animation
+        */
         if (
             $('.symptons-img').hasClass('-hidden')
             && totalScrollMark > $('.symptons-img').offset().top - $('.symptons-img').height()/8
