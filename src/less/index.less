@@ -282,17 +282,19 @@ header {
         max-width: 960px;
         margin: 0 auto;
 
-        > p {
-            font-size: 18px;
-            color: @headerColor;
-            letter-spacing: 0.3px;
-            text-rendering: optimizelegibility;
-            line-height: 30px;
-            -webkit-font-smoothing: antialiased;
-        }
+        ._block-content {
+            > p {
+                font-size: 18px;
+                color: @mainCopyColor;
+                letter-spacing: 0.3px;
+                text-rendering: optimizelegibility;
+                line-height: 30px;
+                -webkit-font-smoothing: antialiased;
+            }
 
-        > button {
-            display: block;
+            > button {
+                display: block;
+            }
         }
 
         > img {
@@ -515,7 +517,7 @@ header {
 .signup-form-container {
     padding: 0 20px;
 
-    h2 {
+    > h2 {
         margin: 100px 0 40px;
         text-align: center;
     }
@@ -555,24 +557,45 @@ header {
             &.-active {
                 background: #44A0B2;
                 color: #fff;
+
+                &:hover {
+                    background: #3ab2cd;
+                    color: #fff;
+                }
+            }
+
+            &:focus {
                 outline: none;
+            }
+
+            &:hover {
+                border-color: #3ab2cd;
+                color: #3ab2cd;
             }
         }
     }
 
-    p {
-        margin: 20px auto;
-        font-size: 14px;
-        color: @mainCopyColor;
-        letter-spacing: 0.5px;
-        text-rendering: optimizelegibility;
-        line-height: 22px;
-        text-align: center;
-        display: none;
-        -webkit-font-smoothing: antialiased;
+    ._form-description {
+        > p {
+            margin: 20px auto;
+            font-size: 14px;
+            color: @mainCopyColor;
+            letter-spacing: 0.5px;
+            text-rendering: optimizelegibility;
+            line-height: 22px;
+            text-align: center;
+            display: none;
+            -webkit-font-smoothing: antialiased;
 
-        &.-active {
-            display: block;
+            &.-active {
+                display: block;
+            }
+        }
+
+        > h2 {
+            margin: 100px 0 40px;
+            text-align: center;
+            font-weight: normal;
         }
     }
 
@@ -599,6 +622,11 @@ header {
             padding: 20px;
             box-sizing: border-box;
             margin-top: @smallGutter;
+
+            &:focus {
+                outline: none;
+                border: 1px solid #b7b7c2;
+            }
         }
 
         input[type="submit"] {
@@ -634,6 +662,11 @@ header {
             padding: 20px;
             box-sizing: border-box;
             margin-top: @smallGutter;
+
+            &:focus {
+                outline: none;
+                border: 1px solid #b7b7c2;
+            }
         }
 
         div.mce_inline_error {
@@ -671,10 +704,6 @@ header {
                 top: 0px;
                 margin: 0;
             }
-        }
-
-        &.-join {
-            display: block;
         }
     }
 }
