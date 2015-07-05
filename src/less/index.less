@@ -470,7 +470,7 @@ header {
             top: 0;
             bottom: 0;
 
-            p {
+            > p {
                 font-size: 22px;
                 color: @quoteColor;
                 letter-spacing: 0.3px;
@@ -482,7 +482,7 @@ header {
                 -webkit-font-smoothing: antialiased;
             }
 
-            span {
+            > span {
                 font-size: 14px;
                 color: @mainCopyColor;
                 letter-spacing: 0.3px;
@@ -492,6 +492,10 @@ header {
                 text-rendering: optimizelegibility;
                 -webkit-font-smoothing: antialiased;
                 margin-top: 25px;
+
+                > a {
+                    color: @mainCopyColor;
+                }
 
                 &:before {
                     content: '';
