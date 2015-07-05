@@ -14,6 +14,18 @@
             }
         }
 
+        &.-big {
+            display: table;
+            margin: 60px -20px 100px;
+            border-collapse: collapse;
+
+            ._big-tile {
+                display: table-cell;
+                border-left: 20px solid #f5f7f9;
+                border-right: 20px solid #f5f7f9;
+            }
+        }
+
         &.-with-img {
             margin: 140px 0 100px;
 
@@ -39,16 +51,6 @@
                 position: absolute;
                 left: 50%;
                 margin: -80px 0 0 -150px;
-            }
-        }
-
-        ._big-tile {
-            box-sizing: border-box;
-            width: 30%;
-            float: left;
-
-            & + ._big-tile {
-                margin-left: 5%;
             }
         }
     }

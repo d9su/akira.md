@@ -103,17 +103,21 @@
     }
 
     ._big-tile {
-        background: #fff;
-        box-shadow: 0 1px 5px rgba(0,0,0,0.05);
         padding: 40px 30px;
         text-align: center;
         cursor: pointer;
+        position: relative;
 
-        h2 {
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        > h2 {
             color: @headerColor;
         }
 
-        p {
+        > p {
             font-size: 14px;
             color: @mainCopyColor;
             letter-spacing: 0.3px;
@@ -128,6 +132,8 @@
             height: 40px;
             width: 40px;
             margin: 0 auto 40px;
+            position: relative;
+            z-index: 1;
 
             background-repeat: no-repeat;
             background-position: 50%;
@@ -137,6 +143,19 @@
         &.-phone:before { background-image: url('img/i/iosdeveloper@2x.png'); }
         &.-design:before { background-image: url('img/i/uidesigner@2x.png'); }
         &.-devices:before { background-image: url('img/i/fullstackdeveloper@2x.png'); }
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: 0px;
+            bottom: 0px;
+            background: #fff;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+            z-index: 0;
+        }
     }
 
     &.-with-img {
