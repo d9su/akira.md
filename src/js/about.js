@@ -28,6 +28,13 @@
     });
 
     /*
+        Career tiles
+    */
+    $('.tiles ._big-tile').on('click', function() {
+        window.open($(this).data('href'));
+    });
+
+    /*
         Scroll animation
     */
     function debounce(func, wait) {
