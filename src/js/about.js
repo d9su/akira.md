@@ -119,4 +119,11 @@
     scrollHandler();
 
     $(window).on('scroll', debounce(scrollHandler), 500);
+
+    /*
+            Footer map
+    */
+    $('footer .location ._map').on('click', function () {
+        window.open('https://www.google.ca/maps/place/240+King+St+E,+Toronto,+ON+M5A+1K1/@43.651584,-79.367598,17z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb3a3e150799:0xc6718786dedd0641');
+    });
 })();
