@@ -5,6 +5,10 @@
         window.location.href = '#signup';
     });
 
+    $('button.-to-about').on('click', function() {
+        window.location.href = 'about.html';
+    });
+
     $('.menu-overlay li').each(function (index, item) {
         var currentDelay = $(item).css('transition-delay');
         var transitionDelay = currentDelay === '0s' ? '0.1s' : currentDelay;
@@ -38,10 +42,12 @@
             $('.signup-form-container ._form-description p._company').addClass('-active');
             $('.signup-form-container ._form-description p._individual').removeClass('-active');
             $('.signup-form-container ._signup-form.-company').addClass('-active');
+            $('.signup-form-container ._signup-form.-individual').removeClass('-active');
         } else {
             $('.signup-form-container ._form-description p._company').removeClass('-active');
             $('.signup-form-container ._form-description p._individual').addClass('-active');
             $('.signup-form-container ._signup-form.-company').removeClass('-active');
+            $('.signup-form-container ._signup-form.-individual').addClass('-active');
         }
     });
 

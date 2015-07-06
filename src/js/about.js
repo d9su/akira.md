@@ -2,7 +2,7 @@
     'use strict';
 
     $('header button.-signup').on('click', function() {
-        window.location.href = '#signup';
+        window.location.href = 'index.html#signup';
     });
 
     $('.menu-overlay li').each(function (index, item) {
