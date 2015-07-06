@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    $('header button.-signup').on('click', function() {
+    $('header button.-signup, button.signup').on('click', function() {
         window.location.href = '#signup';
     });
 
