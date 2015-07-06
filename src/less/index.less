@@ -43,6 +43,7 @@ button.signup {
     background-color: #6cd089;
     border: none;
     color: #fff;
+    transition: background 0.2s ease;
 }
 
 button:hover.signup {
@@ -142,6 +143,7 @@ header {
             display: inline-block;
             overflow: hidden;
             text-indent: 999px;
+            cursor: pointer;
         }
 
         ._menu {
@@ -156,6 +158,7 @@ header {
             float: right;
             text-indent: 9999px;
             overflow: hidden;
+            cursor: pointer;
         }
 
         ._extra {
@@ -169,6 +172,12 @@ header {
                 color: @mainCopyColor;
                 text-rendering: optimizelegibility;
                 -webkit-font-smoothing: antialiased;
+                opacity: 0.7;
+                transition: opacity 0.2s ease;
+            }
+
+            & a:hover {
+                opacity: 1;
             }
 
             > button {
@@ -177,12 +186,17 @@ header {
                 border: 1px solid #6cd089;
                 color: #6cd089;
                 margin-left: 30px;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: opacity 0.2s ease;
             }
+
         }
     }
 
     .logo {
         height: 20px;
+        cursor: pointer;
     }
 
     &.-about {
@@ -192,10 +206,14 @@ header {
 
         ._logo-link {
             background-image: url("/img/whiteLogo@2x.png");
+            cursor: pointer;
+            outline: none;
         }
 
         ._menu {
             background-image: url('img/i/whiteMenu@2x.png');
+            cursor: pointer;
+            outline: none;
         }
 
         ._extra {
@@ -206,6 +224,11 @@ header {
             > button {
                 color: #fff;
                 border: 1px solid #fff;
+            }
+
+            > button:hover {
+                .general-small-button();
+                opacity: 1;
             }
         }
     }
@@ -229,14 +252,13 @@ header {
         font-size: 24px;
         line-height: 30px;
         text-align: center;
-        text-rendering: optimizelegibility;
-        -webkit-font-smoothing: antialiased;
 
         position: absolute;
         top: 50%;
         left: 50%;
         -webkit-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
+        transition: transform 0.2s, opacity 0.3s ease-in;
 
         li {
             opacity: 1;
@@ -245,12 +267,16 @@ header {
             -webkit-transform: translateX(0);
             transform: translateX(0);
 
-            -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
-            transition: transform 0.2s, opacity 0.1s;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.4s;
+            transition: transform 0.6s, opacity 0.8s;
 
             > a {
                 color: #fff;
                 text-decoration: none;
+                font-weight: bold;
+                text-rendering: optimizelegibility;
+                -webkit-font-smoothing: antialiased;
+
             }
         }
     }
@@ -266,6 +292,8 @@ header {
         text-indent: 9999px;
         top: 20px;
         right: 24px;
+        cursor: pointer;
+        outline: none;
     }
 
     &.-hidden {
@@ -301,6 +329,7 @@ header {
 
             > button {
                 display: block;
+                cursor: pointer;
             }
         }
 
@@ -405,6 +434,7 @@ header {
 
             > button {
                 display: block;
+                cursor: pointer;
             }
 
             > img {
@@ -554,6 +584,7 @@ header {
         width: 100%;
         max-width: 360px;
         border-collapse: collapse;
+        transition: background 0.2s ease;
 
         button {
             background: transparent;
@@ -564,6 +595,8 @@ header {
             color: #42C7E5;
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
+            cursor: pointer;
+            transition: background 0.2s ease;
 
             font-family: 'Gotham Rounded', sans-serif;
             font-size: 14px;
@@ -578,6 +611,7 @@ header {
                 border-bottom-left-radius: 0px;
                 border-top-right-radius: 4px;
                 border-bottom-right-radius: 4px;
+                cursor: pointer;
             }
 
             &.-active {
@@ -659,11 +693,14 @@ header {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
+            transition: background 0.2s ease;
 
             .general-button();
             background-color: #6cd089;
             border: none;
             color: #fff;
+            transition: background 0.2s ease;
+            cursor: pointer;
 
             display: block;
             margin: 30px auto;
