@@ -146,6 +146,6 @@
             Footer map
     */
     $('footer .location ._map').on('click', function () {
-        window.open('https://www.google.ca/maps/place/240+King+St+E,+Toronto,+ON+M5A+1K1/@43.651584,-79.367598,17z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb3a3e150799:0xc6718786dedd0641');
+        window.open('https://www.google.ca/maps/place/340+King+St+E,+Toronto,+ON+M5A+1K8/@43.6531013,-79.362876,17z/data=!3m1!4b1!4m2!3m1!1s0x89d4cb3eb70fef23:0x357cb8348e835660');
     });
 })();
