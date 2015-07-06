@@ -76,9 +76,9 @@
             $('.nav-bar ._on-demand').siblings().removeClass('-active');
         }
 
-        if (totalScrollMark > $('#features').offset().top + 200) {
-            $('.nav-bar ._features').addClass('-active');
-            $('.nav-bar ._features').siblings().removeClass('-active');
+        if (totalScrollMark > $('#doctors').offset().top + 200) {
+            $('.nav-bar ._doctors').addClass('-active');
+            $('.nav-bar ._doctors').siblings().removeClass('-active');
         }
 
         if (totalScrollMark > $('#assistant').offset().top + 200) {
