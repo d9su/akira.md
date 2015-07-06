@@ -126,6 +126,13 @@
     $(window).on('scroll', debounce(scrollHandler), 500);
 
     /*
+        Send email
+    */
+    $('.contact ._send-email').on('click', function () {
+        window.location.href = 'mailto:support@akira.md';
+    });
+
+    /*
             Footer map
     */
     $('footer .location ._map').on('click', function () {

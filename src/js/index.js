@@ -88,13 +88,6 @@
     }, 3000);
 
     /*
-        Send email
-    */
-    $('.contact ._send-email').on('click', function () {
-        window.location.href = 'mailto:support@akira.md';
-    });
-
-    /*
         Scroll animation
     */
     function debounce(func, wait) {
@@ -147,6 +140,13 @@
     scrollHandler();
 
     $(window).on('scroll', debounce(scrollHandler), 500);
+
+    /*
+        Send email
+    */
+    $('.contact ._send-email').on('click', function () {
+        window.location.href = 'mailto:support@akira.md';
+    });
 
     /*
             Footer map
