@@ -86,6 +86,11 @@
             $('.nav-bar ._assistant').siblings().removeClass('-active');
         }
 
+        if (totalScrollMark > $('#records').offset().top + 200) {
+            $('.nav-bar ._records').addClass('-active');
+            $('.nav-bar ._records').siblings().removeClass('-active');
+        }
+
         if (totalScrollMark > $('#careers').offset().top + 200) {
             $('.nav-bar ._careers').addClass('-active');
             $('.nav-bar ._careers').siblings().removeClass('-active');
