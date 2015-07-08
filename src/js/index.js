@@ -139,7 +139,7 @@
 
     scrollHandler();
 
-    $(window).on('scroll', debounce(scrollHandler), 500);
+    $(window).on('scroll', debounce(scrollHandler, 0));
 
     /*
         Send email
