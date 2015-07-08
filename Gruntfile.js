@@ -26,7 +26,7 @@ module.exports = function (grunt) {
             dev: {
                 options: {
                     jshintrc: true,
-                    ignores: [ 'src/js/**/zepto.min.js' ]
+                    ignores: [ 'src/js/**/jquery-1.11.3.min.js' ]
                 },
                 src: [ 'src/js/**/*.js' ]
             }
