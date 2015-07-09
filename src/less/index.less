@@ -313,8 +313,7 @@ header {
     }
 
     &.-hidden {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        left: 100%;
 
         ._nav-list li {
             opacity: 0;
@@ -325,8 +324,8 @@ header {
         }
     }
 
-    -webkit-transition: -webkit-transform 0.2s ease-in;
-    transition: transform 0.2s ease-in;
+    -webkit-transition: left 0.2s ease-in;
+    transition: left 0.2s ease-in;
 }
 
 .header-block {
