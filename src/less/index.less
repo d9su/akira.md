@@ -43,7 +43,8 @@ button.signup {
     background-color: #6cd089;
     border: none;
     color: #fff;
-    transition: background 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover.signup {
@@ -66,7 +67,8 @@ button.explore {
     background-color: transparent;
     border: 1px solid #6cd089;
     color: #6cd089;
-    transition: background 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover.explore {
@@ -88,7 +90,8 @@ button.discover {
     background-color: transparent;
     border: 1px solid #4eb8cc;
     color: #4eb8cc;
-    transition: background 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover.discover {
@@ -112,7 +115,8 @@ button.learn {
     background-color: transparent;
     border: 1px solid #a182b6;
     color: #a182b6;
-    transition: background 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
 }
 
 button:hover.learn {
@@ -176,6 +180,7 @@ header {
                 text-rendering: optimizelegibility;
                 -webkit-font-smoothing: antialiased;
                 opacity: 0.7;
+                -webkit-transition: opacity 0.2s ease;
                 transition: opacity 0.2s ease;
 
                 &:hover {
@@ -191,6 +196,7 @@ header {
                 margin-left: 30px;
                 cursor: pointer;
                 opacity: 0.7;
+                -webkit-transition: opacity 0.2s ease;
                 transition: opacity 0.2s ease;
 
                 &:hover {
@@ -243,12 +249,14 @@ header {
 
 .menu-overlay {
     position: fixed;
-    left: 0%;
-    top: 0%;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(37, 59, 67, 0.98);
     z-index: 999;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
 
     ._nav-list {
         list-style: none;
@@ -265,6 +273,7 @@ header {
         left: 50%;
         -webkit-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
+        -webkit-transition: -webkit-transform 0.2s, opacity 0.3s ease-in;
         transition: transform 0.2s, opacity 0.3s ease-in;
 
         li {
@@ -304,7 +313,8 @@ header {
     }
 
     &.-hidden {
-        left: 100%;
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
 
         ._nav-list li {
             opacity: 0;
@@ -315,7 +325,8 @@ header {
         }
     }
 
-    transition: left 0.2s ease-in;
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 .header-block {
@@ -571,6 +582,7 @@ header {
                 left: 100%;
             }
 
+            -webkit-transition: left 0.3s ease-in;
             transition: left 0.3s ease-in;
         }
     }
@@ -591,6 +603,7 @@ header {
         width: 100%;
         max-width: 360px;
         border-collapse: collapse;
+        -webkit-transition: background 0.2s ease;
         transition: background 0.2s ease;
 
         button {
@@ -603,6 +616,7 @@ header {
             border-top-left-radius: 4px;
             border-bottom-left-radius: 4px;
             cursor: pointer;
+            -webkit-transition: background 0.2s ease;
             transition: background 0.2s ease;
 
             font-family: 'Gotham Rounded', sans-serif;
@@ -700,6 +714,7 @@ header {
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
+            -webkit-transition: background 0.2s ease;
             transition: background 0.2s ease;
 
             .general-button();
